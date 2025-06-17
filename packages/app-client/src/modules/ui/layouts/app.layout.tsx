@@ -61,7 +61,7 @@ const LanguageSwitcher: Component = () => {
 
       <DropdownMenuSeparator />
 
-      <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" rel="noopener noreferrer" href="https://github.com/CorentinTh/enclosed/tree/main/packages/app-client/src/locales">
+      <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" rel="noopener noreferrer" href="https://q.td//tree/main/packages/app-client/src/locales">
         {t('navbar.settings.contribute-to-i18n')}
         <div class="i-tabler-external-link text-lg text-muted-foreground"></div>
       </DropdownMenuItem>
@@ -107,7 +107,7 @@ export const Navbar: Component = () => {
             </Button>
           )}
 
-          <Button variant="ghost" class="text-lg px-0 size-9 hidden md:inline-flex" as={A} href="https://github.com/CorentinTh/enclosed" target="_blank" rel="noopener noreferrer" aria-label={t('navbar.github-repository')}>
+          <Button variant="ghost" class="text-lg px-0 size-9 hidden md:inline-flex" as={A} href="https://q.td/" target="_blank" rel="noopener noreferrer" aria-label={t('navbar.github-repository')}>
             <div class="i-tabler-brand-github"></div>
           </Button>
 
