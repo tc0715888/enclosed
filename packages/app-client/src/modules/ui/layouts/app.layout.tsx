@@ -129,77 +129,7 @@ export const Navbar: Component = () => {
             </DropdownMenuContent>
           </DropdownMenu>
 
-          <DropdownMenu>
 
-            <DropdownMenuTrigger as={Button} class="text-lg px-0 size-9" variant="ghost" aria-label={t('navbar.menu-icon')}>
-              <div class="i-tabler-dots-vertical hidden md:block"></div>
-              <div class="i-tabler-menu-2 block md:hidden"></div>
-            </DropdownMenuTrigger>
-
-            <DropdownMenuContent class="w-46">
-
-              {/* Mobile only items */}
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer md:hidden" target="_blank" href="https://github.com/CorentinTh/enclosed" rel="noopener noreferrer">
-                <div class="i-tabler-brand-github text-lg"></div>
-                {t('navbar.github')}
-              </DropdownMenuItem>
-
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger as="a" class="flex items-center gap-2 md:hidden" aria-label={t('navbar.change-theme')}>
-                  <div class="text-lg" classList={{ 'i-tabler-moon': themeStore.getColorMode() === 'dark', 'i-tabler-sun': themeStore.getColorMode() === 'light' }}></div>
-                  {t('navbar.theme.theme')}
-                </DropdownMenuSubTrigger>
-
-                <DropdownMenuSubContent>
-                  <ThemeSwitcher />
-                </DropdownMenuSubContent>
-
-              </DropdownMenuSub>
-
-              <DropdownMenuSub>
-                <DropdownMenuSubTrigger as="a" class="flex items-center text-medium gap-2 md:hidden" aria-label={t('navbar.change-language')}>
-                  <div class="i-custom-language size-4"></div>
-                  {t('navbar.language')}
-                </DropdownMenuSubTrigger>
-                <DropdownMenuSubContent>
-                  <LanguageSwitcher />
-                </DropdownMenuSubContent>
-              </DropdownMenuSub>
-
-              {/* Default items */}
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href={buildDocUrl({ path: '/' })}>
-                <div class="i-tabler-file-text text-lg"></div>
-                {t('navbar.settings.documentation')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href={buildDocUrl({ path: '/integrations/cli' })}>
-                <div class="i-tabler-terminal text-lg"></div>
-                {t('navbar.settings.cli')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href="https://github.com/CorentinTh/enclosed/issues/new/choose" rel="noopener noreferrer">
-                <div class="i-tabler-bug text-lg"></div>
-                {t('navbar.settings.report-bug')}
-              </DropdownMenuItem>
-
-              <DropdownMenuItem as="a" class="flex items-center gap-2 cursor-pointer" target="_blank" href="https://buymeacoffee.com/cthmsst" rel="noopener noreferrer">
-                <div class="i-tabler-pig-money text-lg"></div>
-                {t('navbar.settings.support')}
-              </DropdownMenuItem>
-
-              {config.isAuthenticationRequired && authStore.getIsAuthenticated() && (
-                <>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem class="flex items-center gap-2 cursor-pointer" onClick={() => authStore.logout()}>
-                    <div class="i-tabler-logout text-lg"></div>
-                    {t('navbar.settings.logout')}
-                  </DropdownMenuItem>
-                </>
-              )}
-
-            </DropdownMenuContent>
-
-          </DropdownMenu>
         </div>
       </div>
     </div>
